@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tnm-xT-Ecn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Empty Data Set Delegate-->
+        <scene sceneID="UDF-4O-zuO">
+            <objects>
+                <viewController storyboardIdentifier="STTodoListViewController" id="28g-od-fGD" customClass="STTodoListViewController" customModule="Sample_ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ilj-Xt-bSq"/>
+                        <viewControllerLayoutGuide type="bottom" id="gtM-ED-cLf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BVN-yJ-JuX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TAY-ho-qNq">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0df-T5-x2b">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TODOCell" id="vZu-ik-zEU">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vZu-ik-zEU" id="bdT-As-BXv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="28g-od-fGD" id="GNY-Vo-ehB"/>
+                                    <outlet property="delegate" destination="28g-od-fGD" id="hmZ-8y-SRG"/>
+                                    <outlet property="emptyDataSetDelegate" destination="28g-od-fGD" id="0Cg-lw-e5p"/>
+                                    <outlet property="emptyDataSetSource" destination="28g-od-fGD" id="BMS-T2-uev"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0df-T5-x2b" firstAttribute="leading" secondItem="BVN-yJ-JuX" secondAttribute="leading" id="BBw-sj-cFL"/>
+                            <constraint firstItem="0df-T5-x2b" firstAttribute="top" secondItem="ilj-Xt-bSq" secondAttribute="bottom" id="cA4-gD-tKd"/>
+                            <constraint firstItem="gtM-ED-cLf" firstAttribute="top" secondItem="0df-T5-x2b" secondAttribute="bottom" id="oPg-pM-Lcu"/>
+                            <constraint firstAttribute="trailing" secondItem="0df-T5-x2b" secondAttribute="trailing" id="uv5-8D-fsE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w9g-To-UCr">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="G75-kZ-Hqz">
+                            <connections>
+                                <action selector="didTapSignOut:" destination="28g-od-fGD" id="jAm-pu-XDo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Jhf-vc-nkZ">
+                            <connections>
+                                <action selector="didTapAddItem:" destination="28g-od-fGD" id="TiI-8w-2eT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="0df-T5-x2b" id="Fs2-gD-rCM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v01-x7-tJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wFh-0V-ynZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tnm-xT-Ecn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ofk-bI-vmc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="28g-od-fGD" kind="relationship" relationship="rootViewController" id="7YL-XW-2Ed"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27j-8T-j2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
