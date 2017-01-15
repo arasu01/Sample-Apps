@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80B7D2291E16B9BC009A7CBE /* StickerPackExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 80B7D2281E16B9BC009A7CBE /* StickerPackExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		80B7D22D1E16B9BC009A7CBE /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 80B7D22C1E16B9BC009A7CBE /* Stickers.xcstickers */; };
+		80B7D22E1E16B9BC009A7CBE /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 80B7D22C1E16B9BC009A7CBE /* Stickers.xcstickers */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80B7D22A1E16B9BC009A7CBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80B7D21E1E16B9BC009A7CBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80B7D2271E16B9BC009A7CBE;
+			remoteInfo = StickerPackExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		80B7D2341E16B9BC009A7CBE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				80B7D2291E16B9BC009A7CBE /* StickerPackExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		80B7D2241E16B9BC009A7CBE /* Sample Stricker Pack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample Stricker Pack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B7D2281E16B9BC009A7CBE /* StickerPackExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StickerPackExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B7D22C1E16B9BC009A7CBE /* Stickers.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; name = Stickers.xcstickers; path = StickerPackExtension/Stickers.xcstickers; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		80B7D21D1E16B9BC009A7CBE = {
+			isa = PBXGroup;
+			children = (
+				80B7D22C1E16B9BC009A7CBE /* Stickers.xcstickers */,
+				80B7D2251E16B9BC009A7CBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80B7D2251E16B9BC009A7CBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80B7D2241E16B9BC009A7CBE /* Sample Stricker Pack.app */,
+				80B7D2281E16B9BC009A7CBE /* StickerPackExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80B7D2231E16B9BC009A7CBE /* Sample Stricker Pack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80B7D2351E16B9BC009A7CBE /* Build configuration list for PBXNativeTarget "Sample Stricker Pack" */;
+			buildPhases = (
+				80B7D2221E16B9BC009A7CBE /* Resources */,
+				80B7D2341E16B9BC009A7CBE /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80B7D22B1E16B9BC009A7CBE /* PBXTargetDependency */,
+			);
+			name = "Sample Stricker Pack";
+			productName = "Sample Stricker Pack";
+			productReference = 80B7D2241E16B9BC009A7CBE /* Sample Stricker Pack.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		80B7D2271E16B9BC009A7CBE /* StickerPackExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80B7D2311E16B9BC009A7CBE /* Build configuration list for PBXNativeTarget "StickerPackExtension" */;
+			buildPhases = (
+				80B7D2261E16B9BC009A7CBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StickerPackExtension;
+			productName = StickerPackExtension;
+			productReference = 80B7D2281E16B9BC009A7CBE /* StickerPackExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80B7D21E1E16B9BC009A7CBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Arasuvel Theerthapathy";
+				TargetAttributes = {
+					80B7D2231E16B9BC009A7CBE = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					80B7D2271E16B9BC009A7CBE = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 80B7D2211E16B9BC009A7CBE /* Build configuration list for PBXProject "Sample Stricker Pack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 80B7D21D1E16B9BC009A7CBE;
+			productRefGroup = 80B7D2251E16B9BC009A7CBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80B7D2231E16B9BC009A7CBE /* Sample Stricker Pack */,
+				80B7D2271E16B9BC009A7CBE /* StickerPackExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80B7D2221E16B9BC009A7CBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B7D22E1E16B9BC009A7CBE /* Stickers.xcstickers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B7D2261E16B9BC009A7CBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B7D22D1E16B9BC009A7CBE /* Stickers.xcstickers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80B7D22B1E16B9BC009A7CBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80B7D2271E16B9BC009A7CBE /* StickerPackExtension */;
+			targetProxy = 80B7D22A1E16B9BC009A7CBE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		80B7D22F1E16B9BC009A7CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80B7D2301E16B9BC009A7CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80B7D2321E16B9BC009A7CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				INFOPLIST_FILE = StickerPackExtension/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arasu.Sample-Stricker-Pack.StickerPackExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		80B7D2331E16B9BC009A7CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				INFOPLIST_FILE = StickerPackExtension/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arasu.Sample-Stricker-Pack.StickerPackExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		80B7D2361E16B9BC009A7CBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				INFOPLIST_FILE = "Sample Stricker Pack/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arasu.Sample-Stricker-Pack";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		80B7D2371E16B9BC009A7CBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				INFOPLIST_FILE = "Sample Stricker Pack/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.arasu.Sample-Stricker-Pack";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80B7D2211E16B9BC009A7CBE /* Build configuration list for PBXProject "Sample Stricker Pack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B7D22F1E16B9BC009A7CBE /* Debug */,
+				80B7D2301E16B9BC009A7CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80B7D2311E16B9BC009A7CBE /* Build configuration list for PBXNativeTarget "StickerPackExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B7D2321E16B9BC009A7CBE /* Debug */,
+				80B7D2331E16B9BC009A7CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		80B7D2351E16B9BC009A7CBE /* Build configuration list for PBXNativeTarget "Sample Stricker Pack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80B7D2361E16B9BC009A7CBE /* Debug */,
+				80B7D2371E16B9BC009A7CBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80B7D21E1E16B9BC009A7CBE /* Project object */;
+}
