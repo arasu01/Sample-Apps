@@ -1,0 +1,26 @@
+{
+  "stickers" : [
+    {
+      "filename" : "Sticker 1.sticker"
+    },
+    {
+      "filename" : "Sticker 2.sticker"
+    },
+    {
+      "filename" : "icon_27x20@3x.sticker"
+    },
+    {
+      "filename" : "topping09@3x.sticker"
+    },
+    {
+      "filename" : "Sticker Sequence.stickersequence"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "grid-size" : "regular"
+  }
+}
