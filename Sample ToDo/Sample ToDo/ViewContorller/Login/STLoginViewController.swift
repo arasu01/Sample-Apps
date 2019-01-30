@@ -22,7 +22,7 @@ class STLoginViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        if let _ = FIRAuth.auth()?.currentUser {
+        if let _ = Auth.auth().currentUser {
             
         }
     }
@@ -40,14 +40,14 @@ class STLoginViewController: UIViewController {
         let email = emailTextField.text
         let password = passwordTextField.text
         
-        FIRAuth.auth()?.signIn(withEmail: email!, password: password!, completion: { (user, error) in
+        Auth.auth().signIn(withEmail: email!, password: password!, completion: { (user, error) in
             guard let _ = user else {
                 if let error = error {
-                    if let errCode = FIRAuthErrorCode(rawValue: error._code) {
+                    if let errCode = AuthErrorCode(rawValue: error._code) {
                         switch errCode {
-                        case .errorCodeUserNotFound:
+                        case .userNotFound:
                             self.showAlert("User account not found. Try registering")
-                        case .errorCodeWrongPassword:
+                        case .wrongPassword:
                             self.showAlert("Incorrect username/password combination")
                         default:
                             self.showAlert("Error: \(error.localizedDescription)")
@@ -75,11 +75,11 @@ class STLoginViewController: UIViewController {
             if (userInput!.isEmpty) {
                 return
             }
-            FIRAuth.auth()?.sendPasswordReset(withEmail: userInput!, completion: { (error) in
+            Auth.auth().sendPasswordReset(withEmail: userInput!, completion: { (error) in
                 if let error = error {
-                    if let errCode = FIRAuthErrorCode(rawValue: error._code) {
+                    if let errCode = AuthErrorCode(rawValue: error._code) {
                         switch errCode {
-                        case .errorCodeUserNotFound:
+                        case .userNotFound:
                             DispatchQueue.main.async {
                                 self.showAlert("User account not found. Try registering")
                             }
@@ -127,8 +127,8 @@ class STLoginViewController: UIViewController {
     }
     
     func showAlert(_ message: String) {
-        let alertController = UIAlertController(title: "To Do App", message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        let alertController = UIAlertController(title: "To Do App", message: message, preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default,handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
 
