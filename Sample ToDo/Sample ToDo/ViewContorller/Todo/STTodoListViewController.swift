@@ -13,10 +13,10 @@ import FirebaseDatabase
 
 class Item {
     
-    var ref: FIRDatabaseReference?
+    var ref: DatabaseReference?
     var title: String?
     
-    init (snapshot: FIRDataSnapshot) {
+    init (snapshot: DataSnapshot) {
         ref = snapshot.ref
         
         let data = snapshot.value as! Dictionary<String, String>
@@ -28,10 +28,10 @@ class Item {
 
 class STTodoListViewController: UIViewController {
 
-    var user: FIRUser!
+    var user: User!
     var items = [Item]()
-    var ref: FIRDatabaseReference!
-    private var databaseHandle: FIRDatabaseHandle!
+    var ref: DatabaseReference!
+    private var databaseHandle: DatabaseHandle!
     @IBOutlet weak var tableView: UITableView!
     
     func startObservingDatabase () {
@@ -39,7 +39,7 @@ class STTodoListViewController: UIViewController {
             var newItems = [Item]()
             
             for itemSnapShot in snapshot.children {
-                let item = Item(snapshot: itemSnapShot as! FIRDataSnapshot)
+                let item = Item(snapshot: itemSnapShot as! DataSnapshot)
                 newItems.append(item)
             }
             
@@ -71,8 +71,8 @@ extension STTodoListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        user = FIRAuth.auth()?.currentUser
-        ref = FIRDatabase.database().reference()
+        user = Auth.auth().currentUser
+        ref = Database.database().reference()
         startObservingDatabase()
         
         if tableView != nil {
@@ -86,7 +86,7 @@ extension STTodoListViewController {
     
     @IBAction func didTapSignOut(_ sender: UIBarButtonItem) {
         do {
-            try FIRAuth.auth()?.signOut()
+            try Auth.auth().signOut()
             kAppDelegate.loginAsRootViewController()
         } catch let error {
             assertionFailure("Error signing out: \(error)")
@@ -131,7 +131,7 @@ extension STTodoListViewController: UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let item = items[indexPath.row]
             item.ref?.removeValue()
@@ -145,8 +145,19 @@ extension STTodoListViewController: DZNEmptyDataSetSource {
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         let message = "Nothing to display"
         
-        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string:message, attributes:[NSFontAttributeName: UIFont.systemFont(ofSize: 20.0)])
+        let attributedString: NSMutableAttributedString = NSMutableAttributedString(string:message, attributes:convertToOptionalNSAttributedStringKeyDictionary([convertFromNSAttributedStringKey(NSAttributedString.Key.font): UIFont.systemFont(ofSize: 20.0)]))
         return attributedString
     }
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}

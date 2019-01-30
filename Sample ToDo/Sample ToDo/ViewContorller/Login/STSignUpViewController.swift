@@ -40,13 +40,13 @@ class STSignUpViewController: UITableViewController {
     @IBAction func signupButtonPressed(_ sender: AnyObject) {
         let email = emailIdTextField.text
         let password = passwordTextField.text
-        FIRAuth.auth()?.createUser(withEmail: email!, password: password!, completion: { (user, error) in
+        Auth.auth().createUser(withEmail: email!, password: password!, completion: { (user, error) in
             if let error = error {
-                if let errCode = FIRAuthErrorCode(rawValue: error._code) {
+                if let errCode = AuthErrorCode(rawValue: error._code) {
                     switch errCode {
-                    case .errorCodeInvalidEmail:
+                    case .invalidEmail:
                         self.showAlert("Enter a valid email.")
-                    case .errorCodeEmailAlreadyInUse:
+                    case .emailAlreadyInUse:
                         self.showAlert("Email already in use.")
                     default:
                         self.showAlert("Error: \(error.localizedDescription)")
@@ -56,7 +56,7 @@ class STSignUpViewController: UITableViewController {
             }
             
             
-            let changeRequest = FIRAuth.auth()?.currentUser?.profileChangeRequest()
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
             changeRequest?.displayName = self.firstNameTextField.text! + self.lastNameTextField.text!
             changeRequest?.commitChanges() { (error) in
                 // ...
@@ -84,8 +84,8 @@ class STSignUpViewController: UITableViewController {
     // MARK: - Custom methods
     
     func showAlert(_ message: String) {
-        let alertController = UIAlertController(title: "To Do App", message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+        let alertController = UIAlertController(title: "To Do App", message: message, preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default,handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
     
